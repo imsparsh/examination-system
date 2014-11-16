@@ -1,0 +1,38 @@
+/* Bare minimum styles */
+.slider {
+    -ms-touch-action: pan-y; /* Prevent default touch actions on Windows 8. Only required for IE10 */
+    overflow: auto; /* Not required but recommended for accessibility when JavaScript is turned off */
+    position: relative;
+    touch-action: pan-y; /* Prevent default touch actions on Windows 8. Supported in IE11+ */
+}
+
+
+/* The arrows can of course also be styled to your liking. This is just example styles */
+.as-prev-arrow, .as-next-arrow {
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    height: 40px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 100%;
+    top: 125px;
+    white-space: nowrap;
+    width: 40px;
+    z-index: 10;
+}
+
+.as-prev-arrow {
+        background: url(../images/prev.png) no-repeat;
+    left: 0;
+}
+
+.as-next-arrow {
+        background: url(../images/next.png) no-repeat;
+    right: 0;
+}
+
+.slider:hover .as-prev-arrow, .slider:hover .as-next-arrow {
+    filter: alpha(opacity=1);
+    opacity: 1;
+}
